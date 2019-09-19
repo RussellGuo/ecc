@@ -6,17 +6,17 @@ import random
 EllipticCurve = collections.namedtuple('EllipticCurve', 'name p a b g n h')
 
 curve = EllipticCurve(
-    'secp256k1',
+    'secp256r1',
     # Field characteristic.
-    p=0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f,
+    p=0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff,
     # Curve coefficients.
-    a=0,
-    b=7,
+    a=-3,
+    b=0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b,
     # Base point.
-    g=(0x79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798,
-       0x483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8),
+    g=(0x6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296,
+       0x4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5),
     # Subgroup order.
-    n=0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141,
+    n=0xffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551,
     # Subgroup cofactor.
     h=1,
 )
